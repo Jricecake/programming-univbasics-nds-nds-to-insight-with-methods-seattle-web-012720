@@ -16,7 +16,7 @@ def gross_for_director(director_data)
     directors_grosses[:current_director_name] = director_total
    #binding.pry
   end
-  
+  return directors_grosses
 end
 
 # Write a method that, given an NDS creates a new Hash
