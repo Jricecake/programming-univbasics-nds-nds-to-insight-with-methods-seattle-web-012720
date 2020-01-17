@@ -10,7 +10,7 @@ def gross_for_director(director_data)
   directors_grosses = []
   
   while director_index < director_data[:movies].length do
-    current_director_name = director_data[0]
+    current_director_name = director_data[0].to_s
     directors_grosses += director_data[:movies][director_index][:worldwide_gross]
     director_index += 1
     director_data[:current_director_name]
