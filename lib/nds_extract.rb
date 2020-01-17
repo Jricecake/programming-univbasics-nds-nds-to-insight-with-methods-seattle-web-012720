@@ -13,9 +13,10 @@ def gross_for_director(director_data)
     current_director_name = director_data[0]
     directors_grosses += director_data[:movies][director_index][:worldwide_gross]
     director_index += 1
+    director_data[:current_director_name]
     binding.pry
   end
-  directors_grosses[director_data][0] = directors_grosses
+  
 end
 
 # Write a method that, given an NDS creates a new Hash
