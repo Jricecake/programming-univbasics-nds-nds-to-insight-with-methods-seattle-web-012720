@@ -7,13 +7,13 @@ require 'pp'
 def gross_for_director(director_data)
   director_index = 0
   director_total = 0
-  directors_grosses = []
+  directors_grosses = {}
   
   while director_index < director_data[:movies].length do
     current_director_name = director_data[0].to_s
     directors_grosses += director_data[:movies][director_index][:worldwide_gross]
     director_index += 1
-    director_data[:current_director_name]
+    directors_grosses[:current_director_name] = director_total
     binding.pry
   end
   
