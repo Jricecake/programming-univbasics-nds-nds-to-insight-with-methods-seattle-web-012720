@@ -24,5 +24,23 @@ end
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
   result = {}
-  nil
+  directors_index = 0
+  total_gross = 0
+  current_total = 0
+  
+  while directors_index < directors_database.length do
+    movies_index = 0
+    while movies_index < directors_database[directors_index][:movies].length do
+      current_total += directors_database[directors_index][:movies][movies_index][:worldwide_gross]
+      currentname = (directors_database[directors_index][:name]).to_s
+      total_gross += directors_database[directors_index][:movies][movies_index][:worldwide_gross]
+      movies_index += 1
+      result[currentname] = current_total
+      ##binding.pry
+      end
+    current_total = 0  
+    directors_index += 1
+    end
+result[:total] = total_gross
+return result
 end
